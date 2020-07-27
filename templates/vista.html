@@ -1,0 +1,39 @@
+<!-- Esta plantilla es la que se visualiza en la url "viajes" (declarada en Vies.py) y se encarga
+de visualizar la base de datos 
+-->
+<html>
+<!-- Texto tipo header 1 -->
+<h1 style='color:blue;'> 
+	Bienvenido! son los viajes disponibles el dia de hoy:
+
+</h1>
+<!-- Texto tipo header 2 -->
+<h2>
+	Les recordamos que el formato para leer los viajes es:
+</h2>
+<!-- Texto tipo header 2 -->
+<h2 style='color:purple'>
+	Fecha en que se realiza el viaje--precio del boleto--Lugar de abordaje--Destino Final
+</h2>
+
+
+<!-- Texto tipo lista desordenada 
+Aquí obtengo una lista con todos los elementos demi base de datos y las visuailzo uno a uno con el for. 
+-->
+<ul>
+{% for element in Viajes %}
+
+	<p>	
+		{{element.fecha  }} --
+	 	{{element.precio_viaje}} - -
+		{{element.paradero}} - -
+		{{element.destino}}
+	</p>
+
+
+{% endfor %}
+
+
+
+
+</html>
